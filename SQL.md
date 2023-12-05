@@ -4,7 +4,6 @@
 Схема БД состоит из следующих таблиц:
 
 categorys (last_id, title, sort, _lng, action, enable)
-
 colors (last_id, title, color, _lng, action, enable)
 
 Описание БД
