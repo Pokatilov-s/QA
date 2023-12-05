@@ -12,3 +12,23 @@ colors (last_id, title, color, _lng, action, enable)
 SELECT COUNT(last_id) FROM `items`    
 WHERE last_id > 258
 ```
+
+Задание 2  
+Сделайте запрос в магазинчике, который достанет вам те вещи (таблица items), в которых:  
+- Название (title) содержит слово «Платье» или «Платьюшко»  
+- Цена от 10 до 2000  
+- Фотография (image) не пустая  
+```
+SELECT * FROM `items`  
+WHERE title LIKE 'Платье%' OR title LIKE 'Платьюшко%'  
+AND price BETWEEN 10 AND 2000  
+AND image IS NOT null  
+```
+
+Задание 3  
+Я хочу получить последние 15 товаров (ориентируйтесь на автоинкрементальное поле id), у которых непустые параметры   
+```
+SELECT * FROM `items`   
+WHERE params IS NOT null   
+ORDER BY last_id DESC LIMIT 15
+```
