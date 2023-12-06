@@ -3,7 +3,7 @@
 ```
 students (id_student, name, course)
 courses (id_course, course_name, course_desc)
-Таблицы связанны “один ко многим” где course_name = course
+Таблицы связанны “один ко многим” где courses.course_name = students.course
 ```  
 Сильно заморачиваться над ТЗ заказчик не хочет и порешил, что любое текстовое поле будет размеров 50 символов.  
 В таблицу courses необходимо записать следующие данные:  
