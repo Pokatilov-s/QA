@@ -1,0 +1,168 @@
+{
+	"info": {
+		"_postman_id": "fc38c216-b8f9-4827-b201-7859a61e9b68",
+		"name": "Reuse_params",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24068043"
+	},
+	"item": [
+		{
+			"name": "CreateUserWithTasks",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var id_task = pm.response.json().tasks[0].id;\r",
+							"\r",
+							"pm.collectionVariables.set(\"task_id\", id_task);\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "{{$randomEmail}}",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "{{$randomFullName}}",
+							"type": "text"
+						},
+						{
+							"key": "tasks[0][title]",
+							"value": "Test task I56",
+							"type": "text"
+						},
+						{
+							"key": "tasks[0][description]",
+							"value": "Test task I56",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/createuserwithtasks",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"createuserwithtasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddTaskInCron",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email_owner",
+							"value": "{{email_owner}}",
+							"type": "text"
+						},
+						{
+							"key": "task_id",
+							"value": "{{task_id}}",
+							"type": "text"
+						},
+						{
+							"key": "hours",
+							"value": "8",
+							"type": "text"
+						},
+						{
+							"key": "minutes",
+							"value": "40",
+							"type": "text"
+						},
+						{
+							"key": "month",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "days",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "day_weeks",
+							"value": "5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/addtaskincron",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"addtaskincron"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "email_owner",
+			"value": "manager@mail.ru",
+			"type": "string"
+		},
+		{
+			"key": "task_id",
+			"value": ""
+		}
+	]
+}
