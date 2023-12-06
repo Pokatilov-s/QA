@@ -1,0 +1,295 @@
+{
+	"info": {
+		"_postman_id": "80359cd6-f0b7-4ede-b093-ffeb897794ea",
+		"name": "Jira",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24068043"
+	},
+	"item": [
+		{
+			"name": "Получение задачи JRA",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Ds38d1Q2j8JUP3lvnNJB98ED",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "kewin.a@yandex.ru",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://testbase.atlassian.net/rest/api/2/issue/BEGIN-472",
+					"protocol": "https",
+					"host": [
+						"testbase",
+						"atlassian",
+						"net"
+					],
+					"path": [
+						"rest",
+						"api",
+						"2",
+						"issue",
+						"BEGIN-472"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Получение_ссылки_ задачи_JRA",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "kewin.a@yandex.ru",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "Ds38d1Q2j8JUP3lvnNJB98ED",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "ACCEPT",
+						"value": "APPLICATION/JSON",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/xml",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept-Language",
+						"value": "text/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://testbase.atlassian.net/rest/api/3/issueLink/18555",
+					"protocol": "https",
+					"host": [
+						"testbase",
+						"atlassian",
+						"net"
+					],
+					"path": [
+						"rest",
+						"api",
+						"3",
+						"issueLink",
+						"18555"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "JRA_Delete issue",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "ATATT3xFfGF0FIbvm1WEDOmxp0p796DcLkdw2HRGv2PaMcffZzFyaSrKqr7J4LbjGnBLrEC9kHC2XKNXyUdo-Msk7QP0SXD4AH2C1bpzEPDjLzmIg5SnueDxpqUxJRGyFhG0HvSI6Q43uduT8sMGxp-gzMIOxQC-6VOnnc7WV7j4xXh_yu9zzMU=4AF5AB15",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "mail.for.testbase@gmail.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://testbase.atlassian.net/rest/api/2/issue/TEST-21318",
+					"protocol": "https",
+					"host": [
+						"testbase",
+						"atlassian",
+						"net"
+					],
+					"path": [
+						"rest",
+						"api",
+						"2",
+						"issue",
+						"TEST-21318"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "JRA_Edit issue",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "ATATT3xFfGF0FIbvm1WEDOmxp0p796DcLkdw2HRGv2PaMcffZzFyaSrKqr7J4LbjGnBLrEC9kHC2XKNXyUdo-Msk7QP0SXD4AH2C1bpzEPDjLzmIg5SnueDxpqUxJRGyFhG0HvSI6Q43uduT8sMGxp-gzMIOxQC-6VOnnc7WV7j4xXh_yu9zzMU=4AF5AB15",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "mail.for.testbase@gmail.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"update\": {\r\n    \"labels\": [\r\n    {\r\n        \"add\": \"Create_issue\"\r\n    },\r\n    {\r\n        \"remove\": \"bugfix\"\r\n    }\r\n    ],\r\n    \"summary\": [\r\n    {\r\n        \"set\": \"Test task for the method Create issue №2\"\r\n    }\r\n    ],\r\n    \"timetracking\": [\r\n    {\r\n        \"edit\": {\r\n        \"originalEstimate\": \"2w\",\r\n        \"remainingEstimate\": \"3w\"\r\n        }\r\n    }\r\n    ]\r\n} \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://testbase.atlassian.net/rest/api/2/issue/TEST-21318",
+					"protocol": "https",
+					"host": [
+						"testbase",
+						"atlassian",
+						"net"
+					],
+					"path": [
+						"rest",
+						"api",
+						"2",
+						"issue",
+						"TEST-21318"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "JRA_Create issue",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "ATATT3xFfGF0FIbvm1WEDOmxp0p796DcLkdw2HRGv2PaMcffZzFyaSrKqr7J4LbjGnBLrEC9kHC2XKNXyUdo-Msk7QP0SXD4AH2C1bpzEPDjLzmIg5SnueDxpqUxJRGyFhG0HvSI6Q43uduT8sMGxp-gzMIOxQC-6VOnnc7WV7j4xXh_yu9zzMU=4AF5AB15",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "mail.for.testbase@gmail.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"fields\": {\r\n    \"assignee\": {\r\n      \"id\": \"62137d8a758035006833851c\"\r\n    },\r\n    \"description\": \"Тестовая задача для метода Create issue №2\",\r\n    \"issuetype\": {\r\n      \"id\": \"10103\"\r\n    },\r\n    \"labels\": [\r\n      \"bugfix\",\r\n      \"postam_API\"\r\n    ],\r\n    \"priority\": {\r\n        \"id\": \"1\"\r\n    },\r\n    \"project\": {\r\n      \"id\": \"10302\"\r\n    },\r\n    \"summary\": \"Тестовая задача для метода Create issue №2\",\r\n    \"parent\": {\r\n        \"key\": \"TEST-21217\" \r\n    }\r\n  }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://testbase.atlassian.net/rest/api/2/issue",
+					"protocol": "https",
+					"host": [
+						"testbase",
+						"atlassian",
+						"net"
+					],
+					"path": [
+						"rest",
+						"api",
+						"2",
+						"issue"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
