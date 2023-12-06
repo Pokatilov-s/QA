@@ -2,11 +2,13 @@
 Краткая информация о БД [shop.bugred.ru](http://shop.bugred.ru/)
 
 Схема БД состоит из следующих таблиц(только используемые в заданиях таблицы):   
+```
 categorys (last_id, title, sort, _lng, action, enable)        
 items (last_id, sizes, colors, title, price, image, photos, category, description, sort, _lng, action, enable, params)  
 orders (last_id, price, phone, addr, sort, _lng, action, enable, user_id)  
 users (last_id, name, email, sort, _lng, action, enable, password)  
-last_views (last_id, user_id, item, sort, _lng, action, enable)  
+last_views (last_id, user_id, item, sort, _lng, action, enable)
+```
 
 Задание    
 Сделайте запрос в магазинчике. Я хочу подсчитать, сколько товаров создали вчера (при условии, что выборку делаю утром и новых товаров "сегодня" ещё не создавалось).   
