@@ -1,4 +1,4 @@
-Задание *выполнялось в СУБД PostgreSQL* 
+Задание *выполнялось в СУБД PostgreSQL*  
 Заказчик придумал схему БД:  
 ```
 students (id_student, name, course)
